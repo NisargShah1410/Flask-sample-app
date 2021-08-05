@@ -22,7 +22,9 @@ jobs:
         pip install -r requirements.txt
     
     - name: Run tests with pytest
-      run: pytest
+      run: |
+        pip install pytest
+        pytest
     
     - name: Building web app
       uses: azure/appservice-build@v2
